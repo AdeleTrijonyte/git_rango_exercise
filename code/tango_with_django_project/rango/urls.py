@@ -17,7 +17,11 @@ urlpatterns = [
         views.register,
         name='register'), # New pattern!
 
-    url(r'^login/$', views.user_login, name='login'),
+    url(r'^login/$',
+        views.user_login,
+        name='login'),
+
+    url(r'^restricted/', views.restricted, name='restricted'),
 
 	
 ]
