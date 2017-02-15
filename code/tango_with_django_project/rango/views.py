@@ -105,10 +105,12 @@ def about(request):
 
     visitor_cookie_handler(request)
 
+    context_dict = {}
     context_dict['visits'] = request.session['visits']
-    response = render(request, 'rango/about.html', context=context_dict)
+    print request.session['visits']
+    #response = render(request, 'rango/about.html', context_dict )
 
-    return response
+    return render(request, 'rango/about.html', context_dict )
 
 
 # previous version:
